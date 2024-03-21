@@ -17,6 +17,12 @@ jobs:
       timeout-minutes: 12
     - run: |
         docker --version
+    - name: image
+      run: |
+        docker pull nginx
+    - name: docker image
+      run: |
+        docker images 
     # Add your build steps here
     - name: Build application
       run: |
