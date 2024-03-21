@@ -23,6 +23,9 @@ jobs:
     - name: docker image
       run: |
         docker images 
+    - name: tag image
+      run: |
+        docker tag nginx adrehmanasghar/test1:2
     # Add your build steps here
     - name: Build application
       run: |
