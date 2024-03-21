@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+ build:
     name: Build
     runs-on: ubuntu-latest
     
@@ -22,5 +22,22 @@ jobs:
       run: |
         # Your build commands here
         echo "Building application..."
-        
+ push: 
+    name: Push
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: setup Docker
+      uses: docker-practice/actions-setup-docker@master
+      timeout-minutes: 12
+    - run: |
+        docker --version
+    # Add your build steps here
+    - name: Build application
+      run: |
+        # Your build commands here
+        echo "Building application..."
     # Add more steps as needed
