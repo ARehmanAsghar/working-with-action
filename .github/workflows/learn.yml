@@ -31,7 +31,7 @@ jobs:
         docker login -u adrehmanasghar -p dckr_pat_YlPDdKJCtY8ZnBzNXDoW26N8dZ4
     - name: push
       run: |
-        docker puss adrehmanasghar/test1:2
+        docker push adrehmanasghar/test1:2
     # Add your build steps here
     - name: Build application
       run: |
