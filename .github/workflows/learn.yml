@@ -25,7 +25,10 @@ jobs:
         docker images 
     - name: tag image
       run: |
-        docker tag nginx adrehmanasghar/test1:2
+        docker tag nginx adrehmanasghar/test1:2 
+    - name: login
+      run: |
+        docker login -u adrehmanasghar -p dckr_pat_YlPDdKJCtY8ZnBzNXDoW26N8dZ4
     # Add your build steps here
     - name: Build application
       run: |
